@@ -1,0 +1,265 @@
+.fitting-room-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.model-view {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.model-placeholder {
+  width: 300px;
+  height: 500px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #999;
+  text-align: center;
+  width: 80%;
+}
+
+.selected-shirt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.selected-pants {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+/* Recommendations section styles */
+.recommendations-section {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #f0f8ff; /* Light blue background */
+  border-radius: 8px;
+  border-left: 4px solid #1e90ff; /* Accent color */
+}
+
+.recommendations-section h2 {
+  color: #1e90ff;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.recommendations-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.recommended-item {
+  min-width: 200px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: white;
+  position: relative;
+}
+
+.recommended-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.recommended-item img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.item-name {
+  font-weight: bold;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.item-price {
+  color: #1e90ff;
+  font-weight: bold;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.recommendation-message {
+  font-size: 14px;
+  color: #666;
+  margin: 8px 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.add-recommendation-btn {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.add-recommendation-btn:hover {
+  background-color: #0078e7;
+}
+
+/* Existing styles */
+.selection-area {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.item-selection {
+  flex: 1;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.item-selection h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.items-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.no-items {
+  width: 100%;
+  text-align: center;
+  color: #999;
+  padding: 20px 0;
+}
+
+.item {
+  min-width: 150px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.item.selected {
+  border-color: #4CAF50;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+
+.item img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.item p {
+  margin: 5px 0;
+  text-align: center;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.total-price {
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #45a049;
+}
+
+.return-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.return-btn:hover {
+  background-color: #d32f2f;
+}
+
+@media (max-width: 768px) {
+  .selection-area,
+  .recommendations-container {
+    flex-direction: column;
+  }
+  
+  .model-placeholder {
+    width: 250px;
+    height: 400px;
+  }
+  
+  .recommended-item {
+    min-width: unset;
+    width: 100%;
+  }
+}
